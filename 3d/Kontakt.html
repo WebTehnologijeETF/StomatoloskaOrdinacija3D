@@ -21,15 +21,38 @@
 <form class="kontakt_forma">
 	Ime: <input id="ime" name="ime" type="text">
 	<P> Prezime: <input id="prezime" name="prezime" type="text">
+	<P> Mjesto: <input id="mjesto" name="mjesto" type="text">  <p id="upozorenje"> </p>
+	<P> Općina: <input id="opcina" name="opcina" type="text">
 	<P> Email: <input id="email" name="email" type="text">
 	<P> Poruka: <textarea id="poruka" name="poruka"></textarea>
 	<br><br>
-	<input id="posalji" type="submit" value="Pošalji">
+	<input id="posalji" type="submit" value="Pošalji" onClick="Provjeri();">
 </form>
 
 <br>
 Naša lokacija:
 <img src="http://imageprocessor.websimages.com/width/539/crop/42,0,462x346/stomatoloskaordinacija3d.webs.com/10456820_535923326533281_2923626144820835315_n.jpg" alt="slika">
+
+<script>
+  function Provjeri()
+{
+var opcina=document.getElementById('opcina').value;
+var mjesto=document.getElementById('mjesto').value;
+if (opcina.length==0 && mjesto.length==0) { 
+    document.getElementById("upozorenje").innerHTML="";
+    return;
+} else {
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+            document.getElementById("upozorenje").innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("GET","http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina="+opcina+"&mjesto="+mjesto,true);
+    xmlhttp.send();
+}    
+}
+</script>
 
 
 </body>
