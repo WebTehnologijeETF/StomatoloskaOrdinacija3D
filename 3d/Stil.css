@@ -1,13 +1,108 @@
 body {
-	background-color:#F0F0F0;
+	background-color:green;
+	font-family:sans-serif;
+	color:green;
+
+}
+
+#glavno{
+width:95%;
+background-color:white;
+margin-right:30px;
+margin-left:30px;
+margin-top:30px;
 
 }
 
 .logo {
-	text-align:left;
-	width: 400px;
-    height: 150px;
-	background-color: #F0F0F0;
+	width: 450px;
+    height: 175px;
+	margin:10px;
+
 }
+
+#zaglavlje {
+background-color:white;
+text-align:right;
+margin:10px;
+}
+
+#meni {
+margin-top:-110px;}
+
+#meni ul{
+list-style-type:none;  
+margin-left:-10px;
+margin-bottom:80px;
+}
+
+#meni li{
+display:inline;
+
+}
+
+#meni li a{
+text-decoration:none;
+color:green;
+border: medium green solid;
+padding:5px;
+font-size:18pt;
+margin-right:30px;
+box-shadow: 0px 0px 15px green;
+}
+
+#novosti {
+color:green;
+width:93%;
+margin-left:30px;
+border: medium green solid;
+padding:10px;
+box-shadow: 0px 0px 15px green;
+}
+
+.naslov {
+color:green;
+text-align:center;}
+
+#podnozje {
+background-color:white;
+width:95%;
+margin:30px;
+color:green;
+font-size:small;
+text-align:right;
+}
+
+p.novost {
+text-align: justify;}
+
+
+.novosti_slika{
+margin:5px;
+margin-left:auto;
+margin-right:auto;
+}
+
+a{
+color:green;}
+
+.datum{
+font-size:small;;
+}
+
+#partneri {
+margin:30px;
+padding:20px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
+}
+
+.linkovi {
+list-style-image:url(http://www.amrein.com/gif/arrowblueright.gif);}
+
+
+
+
+
 
 
