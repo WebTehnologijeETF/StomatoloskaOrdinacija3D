@@ -3,35 +3,49 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stil.css">  
+	<link rel="stylesheet" href="Stil.css">  
 	<title> Stomatološka ordinacija 3D </title>
 
 </head>
 
 <body>
+<div id="glavno">
+<div id="zaglavlje">
 <img class="logo" src="logo.jpg" alt="logo">
+</div>
 
+<div id="meni">
 <ul class="meni">
 	<li><a href="Naslovna.html">Novosti</a></li>
 	<li><a href="Onama.html">O nama</a></li>
 	<li><a href="Kontakt.html">Kontakt</a></li>
 	<li><a href="Linkovi.html">Linkovi</a></li>
 </ul>
+</div>
 
-<form class="kontakt_forma">
-	Ime: <input id="ime" name="ime" type="text">
-	<P> Prezime: <input id="prezime" name="prezime" type="text">
-	<P> Mjesto: <input id="mjesto" name="mjesto" type="text">  <p id="upozorenje"> </p>
-	<P> Općina: <input id="opcina" name="opcina" type="text">
-	<P> Email: <input id="email" name="email" type="text">
-	<P> Poruka: <textarea id="poruka" name="poruka"></textarea>
-	<br><br>
+<form id="kontakt_forma">
+	Ime: <br>
+	<input id="ime" name="ime" type="text"> <br>
+	Prezime:<br> 
+	<input id="prezime" name="prezime" type="text"> <br>
+	Mjesto:<br> 
+	<input id="mjesto" name="mjesto" type="text"> <br>
+	Općina:<br> 
+	<input id="opcina" name="opcina" type="text"> <br>
+	Email:<br> 
+	<input id="email" name="email" type="text"> <br>
+	Poruka:<br>
+	<textarea id="poruka" name="poruka"></textarea> <br>
 	<input id="posalji" type="submit" value="Pošalji" onClick="Provjeri();">
 </form>
 
-<br>
+<div id="lokacija">
 Naša lokacija:
 <img src="http://imageprocessor.websimages.com/width/539/crop/42,0,462x346/stomatoloskaordinacija3d.webs.com/10456820_535923326533281_2923626144820835315_n.jpg" alt="slika">
+</div>
+
+<div id="podnozje"><p>Copyright &copy; Valjevčić Elvin 2015.</p></div>
+
 
 <script>
   function Provjeri()
