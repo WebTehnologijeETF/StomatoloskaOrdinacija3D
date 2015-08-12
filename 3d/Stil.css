@@ -2,38 +2,43 @@ body {
 	background-color:green;
 	font-family:sans-serif;
 	color:green;
+	
 
 }
 
-#glavno{
-width:95%;
+/*#glavno{
+//width:95%;
 background-color:white;
-margin-right:30px;
-margin-left:30px;
-margin-top:30px;
+margin-right:10px;
+margin-left:120px;
+//margin-top:30px;
 
-}
+}*/
 
 .logo {
 	width: 450px;
-    height: 175px;
-	margin:10px;
+    height: 120px;
+	margin-left:20px;
 
 }
 
 #zaglavlje {
 background-color:white;
-text-align:right;
 margin:10px;
+
 }
 
 #meni {
-margin-top:-110px;}
+	margin-top:30px;
+	//margin-left:900px;
+text-align:right;
+float:right;
+//position:absolute;}
 
 #meni ul{
 list-style-type:none;  
-margin-left:-10px;
-margin-bottom:80px;
+/*margin-left:-10px;
+margin-bottom:80px;*/
 }
 
 #meni li{
@@ -51,29 +56,57 @@ margin-right:30px;
 box-shadow: 0px 0px 15px green;
 }
 
-#novosti {
-color:green;
-width:93%;
-margin-left:30px;
+#lijevo {
+	float:left;
+	margin:10px;
+	margin-top:25px;
+	color:white;
+	font-size:14pt;
+}
+
+.SlikaLocation {
+	float:left;
+}
+
+#SlikaFb {
+	padding:110px;
+
+}
+
+.novost {
 border: medium green solid;
-padding:10px;
+padding:15px;
 box-shadow: 0px 0px 15px green;
+	
+}
+
+#novosti {
+background-color:white;
+color:green;
+//width:85%;
+margin-top:30px;
+margin-left:350px;
+margin-right:10px;
+margin-bottom:30px;
+
+
 }
 
 .naslov {
 color:green;
-text-align:center;}
+text-align:left;}
 
 #podnozje {
 background-color:white;
-width:95%;
-margin:30px;
+//width:95%;
+margin:10px;
 color:green;
 font-size:small;
-text-align:right;
+text-align:center;
+padding:0.1px;
 }
 
-p.novost {
+p.tekst_novosti {
 text-align: justify;}
 
 
@@ -91,22 +124,33 @@ font-size:small;;
 }
 
 #partneri {
-margin:30px;
+//margin-bottom:400px;
 padding:20px;
 border: medium green solid;
 box-shadow: 0px 0px 15px green;
+height:600px;
+}
+
+#partneri li {
+	padding:15px;
+	font-size:17pt;
+	margin-left:40px;
 }
 
 .linkovi {
 list-style-image:url(http://www.amrein.com/gif/arrowblueright.gif);}
 
 #onama {
-margin: 30px;
+padding: 15px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
 }
 
 #tabela{
 margin:50px;
-width:90%;}
+width:90%;
+border: thin green solid;
+box-shadow: 0px 0px 15px green;}
 
 #tabela .sredina {
 text-align:center;}
@@ -114,11 +158,56 @@ text-align:center;}
 text-align:center;}
 
 #kontakt_forma {
-margin:30px;}
+//margin:30px;
+padding:60px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
+height:600px;
+}
+
+video {
+	float:right;
+}
+
+#kontakt_forma #progres {
+	position:absolute;
+	width:185px;
+	left:560px;
+}
+
+#kontakt_forma  input {
+	position:absolute;
+	left:560px;
+	width:180px;
+}
+
+#kontakt_forma  textarea {
+	position:absolute;
+	left:560px;
+	width:180px;
+	height:65px;
+	
+}
+
+#kontakt_forma #posalji {
+	left:420px;
+	top:630px;
+	color:green;
+	width:105px;
+}
+
+
+/*#ime {
+	padding:10px;
+}*/
+
 #lokacija {
-position:absolute;
-top:220px;
-right:70px;}
+	color:white;
+}
+
+#lokacija img{
+width:320px;
+height:250px;}
 
 
 
