@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+
 <div id="zaglavlje">
 	<img class="logo" src="logo.jpg" alt="logo">
 
@@ -16,7 +18,13 @@
 	<div id="meni">
 		<ul class="meni">
 			<li><a href="Naslovna.html">Novosti</a></li>
-			<li><a href="Onama.html">O nama</a></li>
+			<li><a id="o_nama" onclick="prikaziPodMeni()">O nama</a>
+				<ul id="podmeni">
+                    <li><a href="Onama.html">Informacije</a></li>
+                    <li><a href="Onama.html">Cjenovnik</a></li>
+                </ul>
+			</li>
+			
 			<li><a href="Kontakt.html">Kontakt</a></li>
 			<li><a href="Linkovi.html">Linkovi</a></li>
 		</ul>
@@ -47,25 +55,35 @@
 <div id="novosti">
 <form id="kontakt_forma">
 <p>Ako se želite naručiti za pregled, postaviti neko pitanje ili dati neki svoj komentar to možete učiniti na formularu ispod:</p><br>
-	<p>Ime:&nbsp;
-	<input id="ime" name="ime" type="text"> 
-	<p>Prezime:&nbsp;
-	<input id="prezime" name="prezime" type="text"> 
+<div id="greska" style="color:red; font-weight:bold"></div>
+	<p>*Ime:&nbsp;
+	<input id="ime" name="ime" type="text">  
+	<img class="upozorenje" id="slika_ime" src="Pictures/warning.png" alt="slika_ime">
+	<p>*Prezime:&nbsp;
+	<input id="prezime" name="prezime" type="text">
+	<img class="upozorenje" id="slika_prezime" src="Pictures/warning.png" alt="slika_prezime">	
 	<p>Mjesto:&nbsp;
 	<input id="mjesto" name="mjesto" type="text"> 
+	<img class="upozorenje" id="slika_mjesto" src="Pictures/warning.png" alt="slika_mjesto">
 	<p>Općina:&nbsp; 
 	<input list="opcine" name="opcina"> 
+	<img class="upozorenje" id="slika_opcina" src="Pictures/warning.png" alt="slika_opcina">
 	<datalist id="opcine">
     <option value="Novi Grad">
     <option value="Novo Sarajevo">
     <option value="Centar">
     <option value="Stari Grad">
   </datalist>
-	<p>E-mail: &nbsp;
+	<p>*E-mail: &nbsp;
 	<input id="email" name="email" type="text"> 
+	<img class="upozorenje" id="slika_email" src="Pictures/warning.png" alt="slika_email">
+	<p>*Potvrdite E-mail: &nbsp;
+	<input id="email2" name="email2" type="text"> 
+	<img class="upozorenje" id="slika_email2" src="Pictures/warning.png" alt="slika_email2">
 	<p>Poruka: 
 	<textarea id="poruka" name="poruka"></textarea> <br><br><br><br>
-	<input id="posalji" type="submit" value="Pošalji" onClick="Provjeri();">
+	<p> *obavezna polja </p>
+	<input id="posalji" type="submit" value="Pošalji" onclick="return provjeriFormu()">
 	Progres:<progress id="progres"form="kontakt_forma" max=6 value=0></progress>
 
 <video width="400" height="250" controls="controls" autoplay>
@@ -80,7 +98,9 @@
 <div id="podnozje"><p>Copyright &copy; Valjevčić Elvin 2015.</p></div>
 
 
-<script>
+<script src="Validacija2.js"></script>
+<!-- <script>
+
   function Provjeri()
 {
 var opcina=document.getElementById('opcina').value;
@@ -99,7 +119,7 @@ if (opcina.length==0 && mjesto.length==0) {
     xmlhttp.send();
 }    
 }
-</script>
+</script> -->
 
 
 </body>

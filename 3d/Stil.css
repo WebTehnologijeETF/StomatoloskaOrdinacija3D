@@ -42,7 +42,7 @@ margin-bottom:80px;*/
 }
 
 #meni li{
-display:inline;
+display:inline-block;
 
 }
 
@@ -54,8 +54,47 @@ padding:5px;
 font-size:18pt;
 margin-right:30px;
 box-shadow: 0px 0px 15px green;
+
+
 }
 
+#meni ul li ul
+{
+    margin: 0;
+    padding:0;
+    margin-top: 20pt;
+    width: 120px;
+    position: absolute;
+	//background-color:white;
+    visibility: hidden;
+
+}  
+
+#meni ul li ul li
+{
+//padding:10px;
+margin-top:20px;
+background-color:white;
+height:50px;
+}
+
+
+
+
+#podmeni{
+	//position:absolute
+	//padding:10px;
+	//background-color:white;
+	//width: 820px;
+	
+}
+
+#meni ul li ul li a:hover
+{
+	background-color: silver;
+}
+
+   
 #lijevo {
 	float:left;
 	margin:10px;
@@ -162,8 +201,23 @@ text-align:center;}
 padding:60px;
 border: medium green solid;
 box-shadow: 0px 0px 15px green;
-height:600px;
+height:650px;
 }
+
+.upozorenje {
+	position:absolute;
+	left:760px;
+	margin-top:-15px;
+	display:none; 
+}
+
+/*#slika_ime {
+	display:block;
+}
+
+#slika_prezime {
+	display:block;
+}*/
 
 video {
 	float:right;
@@ -179,6 +233,7 @@ video {
 	position:absolute;
 	left:560px;
 	width:180px;
+
 }
 
 #kontakt_forma  textarea {
@@ -191,7 +246,7 @@ video {
 
 #kontakt_forma #posalji {
 	left:420px;
-	top:630px;
+	top:700px;
 	color:green;
 	width:105px;
 }
