@@ -8,7 +8,11 @@
 
 </head>
 
-<body>
+
+
+<body onload="prikaziProizvode()">
+
+
 
 <div id="zaglavlje">
 	<img class="logo" src="logo.jpg" alt="logo">
@@ -53,21 +57,35 @@
 
 <div id="novosti">
 
-<div id="partneri">
-<h1>Partneri:</h1>
+<form id="formaUnosProizvoda">
+<p>Unesite podatke od proizvoda:</p><br>
+	<p>*ID:&nbsp;
+	<input id="idP" name="idP" type="text">  
+	<p>*Naziv:&nbsp;
+	<input id="nazivP" name="nazivP" type="text">
+	<p>*URL Slike:&nbsp;
+	<input id="urlSlike" name="urlSlike" type="text">	
+	<p>Opis: 
+	<textarea id="opis" name="opis"></textarea> <br><br><br><br>
+	<p> *obavezna polja </p>
+	<input id="Dodaj" type="submit" value="Dodaj proizvod" onclick="return dodajProizvod()">
+	<input id="Izmjeni" type="submit" value="Izmjeni proizvod" onclick="return izmijeniProizvod()">
+	<input id="Obrisi" type="submit" value="Obriši proizvod" onclick="return obrisiProizvod()">
+</form>
 
-<ul class="linkovi">
-	<li><a href="http://www.citydeal.ba/">City deal</a></li>
-	<li><a href="http://www.3m.com">3M</a></li>
-	<li><a href="http://www.sirona.com/en/">Sirona</a></li>
+<div id="proizvodi">
 
-</ul>
+
 
 </div>
 </div>
 <div id="podnozje"><p>Copyright &copy; Valjevčić Elvin 2015.</p></div>
 
+<script src="Skripta1.js"></script>
+<script src="Proizvodi.js"></script>
 <script src="Validacija2.js"></script>
+
+
 
 </body>
 

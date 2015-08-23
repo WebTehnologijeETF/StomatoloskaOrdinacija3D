@@ -17,16 +17,16 @@
 
 	<div id="meni">
 		<ul class="meni">
-			<li><a href="Naslovna.html">Novosti</a></li>
+			<li><a onclick="return ucitaj('Naslovna.html')">Novosti</a></li>
 			<li><a id="o_nama" onclick="prikaziPodMeni()">O nama</a>
 				<ul id="podmeni">
-                    <li><a href="Onama.html">Informacije</a></li>
-                    <li><a href="Onama.html">Cjenovnik</a></li>
+                    <li><a onclick="return ucitaj('Onama.html')">Informacije</a></li>
+                    <li><a onclick="return ucitaj('Proizvodi.html')">Proizvodi</a></li>
                 </ul>
 			</li>
 			
-			<li><a href="Kontakt.html">Kontakt</a></li>
-			<li><a href="Linkovi.html">Linkovi</a></li>
+			<li><a onclick="return ucitaj('Kontakt.html')">Kontakt</a></li>
+			<li><a onclick="return ucitaj('Linkovi.html')">Linkovi</a></li>
 		</ul>
 	</div>
 	
@@ -66,7 +66,7 @@
 	<input id="mjesto" name="mjesto" type="text"> 
 	<img class="upozorenje" id="slika_mjesto" src="Pictures/warning.png" alt="slika_mjesto">
 	<p>Općina:&nbsp; 
-	<input list="opcine" name="opcina"> 
+	<input id="opcina" list="opcine" name="opcina"> 
 	<img class="upozorenje" id="slika_opcina" src="Pictures/warning.png" alt="slika_opcina">
 	<datalist id="opcine">
     <option value="Novi Grad">
@@ -83,7 +83,7 @@
 	<p>Poruka: 
 	<textarea id="poruka" name="poruka"></textarea> <br><br><br><br>
 	<p> *obavezna polja </p>
-	<input id="posalji" type="submit" value="Pošalji" onclick="return provjeriFormu()">
+	<input id="posalji" type="submit" value="Pošalji" onclick=" return provjeriFormu()">
 	Progres:<progress id="progres"form="kontakt_forma" max=6 value=0></progress>
 
 <video width="400" height="250" controls="controls" autoplay>
