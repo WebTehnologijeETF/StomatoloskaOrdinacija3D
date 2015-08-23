@@ -37,11 +37,17 @@ function provjeriFormu() {
           return false; 
 	} 
 	
-	if (forma.mjesto.value.length!=0) {
+	/*if (forma.mjesto.value.length!=0) {
 		return ProvjeriOpcinuMjesto();
-	}
+	}*/
 
 	//ajax za mjesto i opcinu
+	if (x==1) {
+		greska.innerHTML+="Unesite odgovarajuće mjesto i općinu";
+		document.getElementById('slika_mjesto').style.display="block";
+		document.getElementById('slika_opcina').style.display="block";
+        return false; 
+	}
 	
 	
 	 return true;
@@ -68,10 +74,14 @@ function prikaziPodMeni() {
     }
 }
 
+var x=0;
 function ProvjeriOpcinuMjesto()
 {
-	var x=0;
-  var mjesto = document.getElementById("mjesto").value;
+	
+	var mjesto = document.getElementById("mjesto").value;
+	var opcina = document.getElementById("opcina").value;
+	if (mjesto=="" || opcina=="") {return false;}
+	else {
 
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function() {
@@ -81,6 +91,7 @@ function ProvjeriOpcinuMjesto()
 				x=1;
 				document.getElementById('greska').innerHTML=greska2.greska;
 				 }
+				 else {document.getElementById('greska').innerHTML=greska2.ok;}
 			
 			
         }
@@ -88,8 +99,6 @@ function ProvjeriOpcinuMjesto()
     
 		 
 		mjesto = encodeURIComponent(mjesto);
-
-        var opcina = document.getElementById("opcina").value;
 		opcina = encodeURIComponent(opcina);
 
     xmlhttp.open("GET","http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina="+opcina+"&mjesto="+mjesto,true);
@@ -98,9 +107,11 @@ function ProvjeriOpcinuMjesto()
 	
 	//alert("fds");
 	
-	if (x==1) { 
+	/*if (x==1) { 
 		return false;}
-	return true;
+	return true;*/
+	return false;
+	}
 }
 
 function ucitaj(adresa)

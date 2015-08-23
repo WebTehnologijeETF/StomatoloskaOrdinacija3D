@@ -63,10 +63,10 @@
 	<input id="prezime" name="prezime" type="text">
 	<img class="upozorenje" id="slika_prezime" src="Pictures/warning.png" alt="slika_prezime">	
 	<p>Mjesto:&nbsp;
-	<input id="mjesto" name="mjesto" type="text"> 
+	<input id="mjesto" name="mjesto" type="text" onblur="return ProvjeriOpcinuMjesto()"> 
 	<img class="upozorenje" id="slika_mjesto" src="Pictures/warning.png" alt="slika_mjesto">
 	<p>Općina:&nbsp; 
-	<input id="opcina" list="opcine" name="opcina"> 
+	<input id="opcina" list="opcine" name="opcina" onblur="return ProvjeriOpcinuMjesto()"> 
 	<img class="upozorenje" id="slika_opcina" src="Pictures/warning.png" alt="slika_opcina">
 	<datalist id="opcine">
     <option value="Novi Grad">
