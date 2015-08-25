@@ -53,20 +53,50 @@
 </div>
 
 <div id="novosti">
-<form id="kontakt_forma" action="php_validacija.php" method="get">
-<p>Ako se želite naručiti za pregled, postaviti neko pitanje ili dati neki svoj komentar to možete učiniti na formularu ispod:</p><br>
+    <h3>Provjerite da li ste ispravno popunili kontakt formu</h3>
+    <br>
+    <?php print "Ime: " .$ime ?>
+    <br><br>
+    <?php print "Prezime: " .$prezime ?>
+    <br><br>
+    <?php print "Mjesto: " .$mjesto ?>
+    <br><br>
+	<?php print "Opcina: " .$opcina ?>
+    <br><br>
+    <?php print "Email: " .$email ?>
+    <br><br>
+    <?php print "Email2: " .$email2 ?>
+    <br><br>
+    <?php print "Poruka: " .$poruka ?>
+    <br><br>
+
+    <h3>Da li ste sigurni da želite poslati ove podatke?</h3>
+    <form method="get" name = "mail" action="posalji_mail.php">
+        <input type="submit" name="send" value="Siguran sam">
+
+        <input type="hidden" name="ime" value="<?php echo $ime;?>">
+
+        <input type="hidden" name="email" value="<?php echo $email;?>">
+
+        <input type="hidden" name="poruka" value="<?php echo $poruka;?>">
+    </form>
+
+
+    <h3>Ako ste pogrešno popunili formu, možete ispod prepraviti unesene podatke</h3>
+
+<form id="kontakt_forma2" action="php_validacija.php" method="get">
 <div id="greska" style="color:red; font-weight:bold"></div>
 	<p>*Ime:&nbsp;
-	<input id="ime" name="ime" type="text">  
+	<input id="ime" name="ime" type="text" value="<?php echo $ime; ?>"> 
 	<img class="upozorenje" id="slika_ime" src="Pictures/warning.png" alt="slika_ime">
 	<p>*Prezime:&nbsp;
-	<input id="prezime" name="prezime" type="text">
+	<input id="prezime" name="prezime" type="text" value="<?php echo $prezime; ?>">
 	<img class="upozorenje" id="slika_prezime" src="Pictures/warning.png" alt="slika_prezime">	
 	<p>Mjesto:&nbsp;
-	<input id="mjesto" name="mjesto" type="text" onblur="return ProvjeriOpcinuMjesto()"> 
+	<input id="mjesto" name="mjesto" type="text" onblur="return ProvjeriOpcinuMjesto()" value="<?php echo $mjesto; ?>"> 
 	<img class="upozorenje" id="slika_mjesto" src="Pictures/warning.png" alt="slika_mjesto">
 	<p>Općina:&nbsp; 
-	<input id="opcina" list="opcine" name="opcina" onblur="return ProvjeriOpcinuMjesto()"> 
+	<input id="opcina" list="opcine" name="opcina" onblur="return ProvjeriOpcinuMjesto()" value="<?php echo $opcina; ?>"> 
 	<img class="upozorenje" id="slika_opcina" src="Pictures/warning.png" alt="slika_opcina">
 	<datalist id="opcine">
     <option value="Novi Grad">
@@ -75,22 +105,15 @@
     <option value="Stari Grad">
   </datalist>
 	<p>*E-mail: &nbsp;
-	<input id="email" name="email" type="text"> 
+	<input id="email" name="email" type="text" value="<?php echo $email; ?>"> 
 	<img class="upozorenje" id="slika_email" src="Pictures/warning.png" alt="slika_email">
 	<p>*Potvrdite E-mail: &nbsp;
-	<input id="email2" name="email2" type="text"> 
+	<input id="email2" name="email2" type="text" value="<?php echo $email2; ?>"> 
 	<img class="upozorenje" id="slika_email2" src="Pictures/warning.png" alt="slika_email2">
 	<p>Poruka: 
-	<textarea id="poruka" name="poruka"></textarea> <br><br><br><br>
+	<textarea id="poruka" name="poruka"><?php echo $poruka; ?></textarea> <br><br><br><br>
 	<p> *obavezna polja </p>
 	<input id="posalji" type="submit" value="Pošalji" onclick=" return provjeriFormu()">
-	Progres:<progress id="progres"form="kontakt_forma" max=6 value=0></progress>
-
-<video width="400" height="250" controls="controls" autoplay>
-	<source src="izbjeljivanje.mp4" type="video/mp4">
-	Vas browser ne podrzava video
-</video>
-
 </form>
 
 </div>
@@ -99,27 +122,7 @@
 
 
 <script src="Validacija2.js"></script>
-<!-- <script>
 
-  function Provjeri()
-{
-var opcina=document.getElementById('opcina').value;
-var mjesto=document.getElementById('mjesto').value;
-if (opcina.length==0 && mjesto.length==0) { 
-    document.getElementById("upozorenje").innerHTML="";
-    return;
-} else {
-    var xmlhttp=new XMLHttpRequest();
-    xmlhttp.onreadystatechange=function() {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-            document.getElementById("upozorenje").innerHTML=xmlhttp.responseText;
-        }
-    }
-    xmlhttp.open("GET","http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?opcina="+opcina+"&mjesto="+mjesto,true);
-    xmlhttp.send();
-}    
-}
-</script> -->
 
 
 </body>

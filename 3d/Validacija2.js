@@ -122,13 +122,79 @@ function ucitaj(adresa)
 	        document.body.innerHTML = ajax.responseText;
 	    }
 	    if (ajax.readyState == 4 && ajax.status == 404)
-	        document.getElementById("GlavniDio").innerHTML = "Greska: nepoznat URL";
+	        document.body.innerHTML = "Greska: nepoznat URL";
 	}
 	    ajax.open("GET", adresa, true);
 	    ajax.send();
 	    return false;
 } 
 
+function ucitaj2(adresa)
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function () {
+	    if (ajax.readyState == 4 && ajax.status == 200) {
+	        document.body.innerHTML = ajax.responseText;
+			prikaziProizvode();
+	    }
+	    if (ajax.readyState == 4 && ajax.status == 404)
+	        document.body.innerHTML = "Greska: nepoznat URL";
+	}
+	    ajax.open("GET", adresa, true);
+	    ajax.send();
+	    return false;
+} 
+
+function PrikaziPunuNovost(datum,naslov,autor,slika,sadrzajNovosti,detaljnijeNovosti) {
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function () {
+	    if (ajax.readyState == 4 && ajax.status == 200) {
+	        document.body.innerHTML = ajax.responseText;
+			prikaziProizvode();
+	    }
+	    if (ajax.readyState == 4 && ajax.status == 404)
+	        document.body.innerHTML = "Greska: nepoznat URL";
+	}
+		slika=encodeURIComponent(slika);
+	    ajax.open("POST","punaNovost.php", true);
+	    ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		ajax.send("datum="+datum+"&naslov="+naslov+"&autor="+autor+"&slika="+slika+"&sadrzajNovosti="+sadrzajNovosti+"&detaljnijeNovosti="+detaljnijeNovosti);
+	    return false;
+	
+}
+
+function prikaziProizvode() {
+	var ajax;
+	ajax=new XMLHttpRequest();
+    ajax.onreadystatechange = function()
+	{                                     
+		if (ajax.readyState == 4 && ajax.status == 200 ){
+			preuzmi(ajax.responseText);						
+		} 						
+   }
+    ajax.open("POST","http://zamger.etf.unsa.ba/wt/proizvodi.php?brindexa=15561", true);
+	ajax.send();
+}
+
+function preuzmi(response)
+{
+		var niz= JSON.parse(response);
+		var izlaz='<table id="tabela" border="1"> <caption>Proizvodi</caption>';
+		izlaz=izlaz+ "<tr><th>ID</th><th>Naziv</th><th>Opis</th><th>Slika</th><tr>";		
+		for(var i=0; i < niz.length; i++)
+		{
+			var id=niz[i].id;
+			var naziv=niz[i].naziv;
+			var slika=niz[i].slika;
+			var opis=niz[i].opis;
+		
+			izlaz=izlaz+ "<tr><td>"+id + "</td>"+"<td>"+naziv + "</td><td>";
+			izlaz= izlaz + opis +"</td><td><img src=" + slika + " alt='' height='150px' weight='230px'></td></tr>";
+		}
+		izlaz= izlaz +'</table><br>';
+		document.getElementById("proizvodi").innerHTML = izlaz;
+}
+			
 
 
 
