@@ -49,11 +49,20 @@
 </div>
 
 </div>
+<div id="LogInDio">
+<form class="LogIn" method="post" action="login.php">
+<input type="text" placeholder="Korisničko ime:" name="korisnickoime">
+<input type="text" placeholder="Šifra:" name="sifra">
+<input type="submit" value="Log in" name="submitLogin">
+</form>
+<br>
+</div>
 
 	<div id="novosti">
 	
 		
-	<?php include "NovostiIzDat.php"; ?>
+	<?php //include "NovostiIzDat.php"; ?>
+	<?php include "NovostiIzBaze.php"; ?>
 		
 	</div>
 

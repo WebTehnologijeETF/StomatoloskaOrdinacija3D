@@ -94,6 +94,22 @@ height:50px;
 	background-color: silver;
 }
 
+#LogInDio {
+	color:white;
+	text-align:right;
+}
+
+.LogIn {
+	position:absolute;
+	right:15px;
+	//float:right;
+	color:white;
+	//margin-right:70px;
+	//margin-left:50px;
+	//margin:10px;
+}
+
+
    
 #lijevo {
 	float:left;
