@@ -105,11 +105,6 @@ function ProvjeriOpcinuMjesto()
     xmlhttp.send();
 	
 	
-	//alert("fds");
-	
-	/*if (x==1) { 
-		return false;}
-	return true;*/
 	return false;
 	}
 }
@@ -194,6 +189,38 @@ function preuzmi(response)
 		izlaz= izlaz +'</table><br>';
 		document.getElementById("proizvodi").innerHTML = izlaz;
 }
+
+function Validiraj() {
+	var ime = document.getElementById("ime").value;
+	var prezime = document.getElementById("prezime").value;
+	var email = document.getElementById("email").value;
+	var email2 = document.getElementById("email2").value;
+	if (ime=="" && prezime=="" && email=="" && email2=="") {return false;}
+	else {
+
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+			var greska2 = JSON.parse(xmlhttp.responseText);
+			if (greska2.greska!=undefined) {
+				x=1;
+				document.getElementById('greska').innerHTML=greska2.greska;
+				 }
+				 else {document.getElementById('greska').innerHTML=greska2.ok;}
+			
+			
+        }
+	}
+    
+		 
+    xmlhttp.open("GET","ValidacijaWebServis.php?ime="+ime+"&prezime="+prezime+"&email="+email+"&email2="+email2,true);
+    xmlhttp.send();
+	
+	return false;
+	}
+}
+	
+
 			
 
 

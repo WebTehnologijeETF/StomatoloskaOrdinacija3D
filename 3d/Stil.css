@@ -2,8 +2,6 @@ body {
 	background-color:green;
 	font-family:sans-serif;
 	color:green;
-	
-
 }
 
 /*#glavno{
@@ -25,20 +23,16 @@ margin-left:120px;
 #zaglavlje {
 background-color:white;
 margin:10px;
-
 }
 
 #meni {
 	margin-top:30px;
-	//margin-left:900px;
-text-align:right;
-float:right;
-//position:absolute;}
+	//text-align:right;
+	float:right;
+}
 
 #meni ul{
-list-style-type:none;  
-/*margin-left:-10px;
-margin-bottom:80px;*/
+//list-style-type:none;  
 }
 
 #meni li{
@@ -47,15 +41,12 @@ display:inline-block;
 }
 
 #meni li a{
-text-decoration:none;
 color:green;
 border: medium green solid;
 padding:5px;
 font-size:18pt;
 margin-right:30px;
 box-shadow: 0px 0px 15px green;
-
-
 }
 
 #meni ul li ul
@@ -262,7 +253,7 @@ video {
 
 #kontakt_forma #posalji {
 	left:420px;
-	top:700px;
+	top:750px;
 	color:green;
 	width:105px;
 }

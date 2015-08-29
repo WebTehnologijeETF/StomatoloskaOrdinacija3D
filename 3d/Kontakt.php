@@ -20,13 +20,13 @@
 			<li><a onclick="return ucitaj('Naslovna.php')">Novosti</a></li>
 			<li><a id="o_nama" onclick="prikaziPodMeni()">O nama</a>
 				<ul id="podmeni">
-                    <li><a onclick="return ucitaj('Onama.html')">Informacije</a></li>
-                    <li><a onclick="return ucitaj2('Proizvodi.html')">Proizvodi</a></li>
+                    <li><a onclick="return ucitaj('Onama.php')">Informacije</a></li>
+                    <li><a onclick="return ucitaj2('Proizvodi.php')">Proizvodi</a></li>
                 </ul>
 			</li>
 			
-			<li><a onclick="return ucitaj('Kontakt.html')">Kontakt</a></li>
-			<li><a onclick="return ucitaj('Linkovi.html')">Linkovi</a></li>
+			<li><a onclick="return ucitaj('Kontakt.php')">Kontakt</a></li>
+			<li><a onclick="return ucitaj('Linkovi.php')">Linkovi</a></li>
 		</ul>
 	</div>
 	
@@ -51,6 +51,8 @@
 </div>
 
 </div>
+
+<?php include "DioZaPrijavu.php"; ?>
 
 <div id="novosti">
 <form id="kontakt_forma" action="php_validacija.php" method="get">

@@ -1,11 +1,15 @@
 <?php
 
-$imeErr = $prezimeErr = $subjErr=$emailErr=$email2Err= "";
+$Err = $prezimeErr = $subjErr=$emailErr=$email2Err= "";
 $ime = $prezime= $email=$forma = $email2=$mjesto=$opcina=$poruka= "";
+
+
+
+	
 
 $validacija = true;
    if (empty($_GET["ime"])) {
-     $imeErr = "Polje 'Ime i Prezime' ne smije biti prazno!";
+     $Err = "Polje 'Ime i Prezime' ne smije biti prazno!";
      $validacija = false;
 
    } else {
@@ -13,13 +17,13 @@ $validacija = true;
      $ime = test_input($_GET["ime"]);
      // da li sadrži samo slova i razmake
      if (!preg_match("/^[a-zA-Z ]*$/",$ime)) {
-       $imeErr = "Samo slova i razmaci su dozvoljeni!"; 
+       $Err = "Samo slova i razmaci su dozvoljeni!"; 
             $validacija = false;
 
      }
    }
-   if (empty($_GET["prezime"])) {
-     $prezimeErr = "Prezime ne smije biti prazno!";
+   if (empty($_GET["prezime"]) && isset($_GET["prezime"])) {
+     $Err = "Prezime ne smije biti prazno!";
      $validacija = false;
 
    } else {
@@ -27,41 +31,38 @@ $validacija = true;
      $prezime = test_input($_GET["prezime"]);
      // da li sadrži samo slova i razmake
      if (!preg_match("/^[a-zA-Z ]*$/",$prezime)) {
-       $prezimeErr = "Samo slova i razmaci su dozvoljeni!"; 
+       $Err = "Samo slova i razmaci su dozvoljeni!"; 
             $validacija = false;
 
      }
    }
    
-   if (empty($_GET["email"])) {
-     $emailErr = "Email je potreban!";
+   if (empty($_GET["email"]) && isset($_GET["email"]) ) {
+     $Err = "Email je potreban!";
                  $validacija = false;
 
 
    } else {
      $email = test_input($_GET["email"]);
      if (!preg_match("/^.+@[^\.].*\.[a-z]{2,}$/",$email))  {
-       $emailErr = "Netačan email format!"; 
+       $Err = "Netačan email format!"; 
                    $validacija = false;
 
      }
    }
    
-    if (empty($_GET["email2"])) {
-     $email2Err = "Email je potreban!";
+    if (empty($_GET["email2"] && isset($_GET["email2"]))) {
+     $Err = "Email je potreban!";
                  $validacija = false;
 
    } else {
      $email2 = test_input($_GET["email2"]);
   if($email2 != $email)
-  	{ $email2Err = "Email-ovi moraju biti isti!"; 
+  	{ $Err = "Email-ovi moraju biti isti!"; 
                    $validacija = false;}
      
    }
    
-    $mjesto = test_input($_GET["mjesto"]);
-	$opcina = test_input($_GET["opcina"]);
-	$poruka = test_input($_GET["poruka"]);
    
    
 function test_input($data) {
@@ -72,13 +73,9 @@ function test_input($data) {
 }
 
 if($validacija==true){
-	include 'potvrda.php';
+	print '{"ok":"Validacija prolazi"}';
 }
 
 else {
-	include 'Kontakt.html';
+	print '{"greska":"'.$Err.'"}';
 }
-   
-   
-   
-?>
