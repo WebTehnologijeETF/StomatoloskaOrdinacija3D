@@ -1,0 +1,11 @@
+﻿8.04.2015. 10:31:44
+Vedran Ljubović
+OVO JE NEKI PRIMJER NOVOSTI
+https://scontent-vie1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10606225_714843571974588_664382617419724770_n.jpg?oh=5f699a4fcabff67a6eb6a24da61d5e49&oe=567DEFBD
+Sada cu napisati neki osnovni tekst.
+Ovaj osnovni tekst se nalazi u više redova.
+Lorem ipsum dolor sit amet i tako dalje mrsko mi je da kopiram.
+--
+Ovdje sada slijedi detaljniji tekst novosti. 
+Lorem ipsum dolor sit amet i tako dalje mrsko mi je da kopiram.
+Lorem ipsum dolor sit amet i tako dalje mrsko mi je da kopiram.

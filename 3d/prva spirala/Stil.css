@@ -1,0 +1,188 @@
+body {
+	background-color:green;
+	font-family:sans-serif;
+	color:green;
+	
+}
+
+.logo {
+	width: 450px;
+    height: 120px;
+	margin-left:20px;
+
+}
+
+#zaglavlje {
+background-color:white;
+margin:10px;
+
+}
+
+#meni {
+	margin-top:30px;
+	float:right;
+}
+
+#meni li{
+display:inline-block;
+
+}
+
+#meni li a{
+text-decoration:none;
+color:green;
+border: medium green solid;
+padding:5px;
+font-size:18pt;
+margin-right:30px;
+box-shadow: 0px 0px 15px green;
+}
+
+#lijevo {
+	float:left;
+	margin:10px;
+	margin-top:25px;
+	color:white;
+	font-size:14pt;
+}
+
+
+
+#SlikaFb {
+	padding:110px;
+	
+}
+
+#glavni_dio {
+background-color:white;
+color:green;
+margin-top:30px;
+margin-left:350px;
+margin-right:10px;
+margin-bottom:30px;
+}
+
+.novost {
+border: medium green solid;
+padding:15px;
+box-shadow: 0px 0px 15px green;
+}
+
+
+
+.naslov {
+color:green;
+text-align:left;}
+
+
+p.tekst_novosti {
+text-align: justify;}
+
+
+.novosti_slika{
+margin:5px;
+margin-left:auto;
+margin-right:auto;
+}
+
+a{
+color:green;}
+
+.datum{
+font-size:small;
+}
+
+
+
+#partneri {
+padding:20px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
+height:600px;
+}
+
+#partneri li {
+	padding:15px;
+	font-size:17pt;
+	margin-left:40px;
+}
+
+.linkovi {
+list-style-image:url(http://www.amrein.com/gif/arrowblueright.gif);}
+
+#onama {
+padding: 15px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
+}
+
+
+
+#tabela{
+margin:50px;
+width:90%;
+border: thin green solid;
+box-shadow: 0px 0px 15px green;
+
+}
+
+#tabela .sredina {
+text-align:center;}
+#tabela .popust{
+text-align:center;}
+
+#kontakt_forma {
+padding:60px;
+border: medium green solid;
+box-shadow: 0px 0px 15px green;
+height:600px;
+}
+
+video {
+	float:right;
+}
+
+#kontakt_forma #progres {
+	position:absolute;
+	width:185px;
+	left:560px;
+}
+
+#kontakt_forma  input {
+	position:absolute;
+	left:560px;
+	width:180px;
+}
+
+#kontakt_forma  textarea {
+	position:absolute;
+	left:560px;
+	width:180px;
+	height:65px;
+	
+}
+
+#kontakt_forma #posalji {
+	left:420px;
+	top:630px;
+	color:green;
+	width:105px;
+}
+
+#podnozje {
+background-color:white;
+margin:10px;
+color:green;
+font-size:small;
+text-align:center;
+padding:0.1px;
+}
+
+
+
+#lokacija img{
+width:320px;
+height:250px;}
+
+
+
